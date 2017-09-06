@@ -1,4 +1,6 @@
 from distutils.core import setup
 
-setup(name='syllabiky', version='1.0', py_modules=['DbMatcher', 'syllabiky'])
-
+setup(name='syllabiky', version='1.0',
+    packages=['syllabiky'],
+    package_dir={'syllabiky': 'src/syllabiky'},
+    package_data={'syllabiky': ['data/*.txt']})
