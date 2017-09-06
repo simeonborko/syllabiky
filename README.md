@@ -5,12 +5,38 @@ Recognize syllables in words, adjusted to Slovak language rules and heuristics.
 
 Author: Simeon Borko, simeon.borko@gmail.com
 
-Date: Sep 01, 2017
+Date: Sep 06, 2017
 
-Usage:
+## Installation
 
-split_phrase('phrase to be processed') -> returns string where words syllables are delimited by hyphen (-)
+```
+pip3 install git+git://github.com/simeonborko/syllabiky.git
+```
 
-split_word('wordtobesplit') -> returns string where word syllables are delimited by hyphen (-)
+## Usage:
 
-split_word('wordtobesplit', True) -> returns list of Syllable objects; you can convert them to string using str(syllableObj)
+```python
+# BASIC USAGE
+
+from syllabiky.syllabiky import split_phrase
+from syllabiky.DbMatcher import DbMatcher
+
+matcher = DbMatcher()
+foo = split_phrase("zirafa", matcher) # zi-ra-fa
+
+# ADVANCED
+
+from syllabiky.syllabiky import split_word
+
+# returns string where words syllables are delimited by hyphen (-)
+split_phrase('phrase to be processed', matcher)
+
+# returns string where word syllables are delimited by hyphen (-)
+split_word('wordtobesplit', matcher)
+
+# returns list of Syllable objects; you can convert them to string using str(syllableObj)
+split_word('wordtobesplit', matcher, True)
+
+```
+
+
