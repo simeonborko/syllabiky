@@ -1,0 +1,5 @@
+# známe prípony
+# dôležité pre rozdelenie slova mastný na mast-ný, nie mas-tný
+
+ný
+ník
