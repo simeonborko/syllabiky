@@ -97,5 +97,7 @@ class DbMatcher:
     def is_prefix(self, x):
         return x in self.prefixes
 
+
+DbMatcher.db = DbMatcher.get_rows(DbMatcher.DIR + '/data/db.txt')
 DbMatcher.suffixes = DbMatcher.get_rows(DbMatcher.DIR + '/data/suff.txt', False)
 DbMatcher.prefixes = DbMatcher.get_rows(DbMatcher.DIR + '/data/pre.txt', False)
